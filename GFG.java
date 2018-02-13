@@ -17,12 +17,16 @@ class GFG {
 		    int a[] = new int[n];
 		    int rem;
 		    
-		    while(i < n) a[i++] = sc.nextInt();
+		    while(i < n) {
+		        a[i++] = sc.nextInt();
+		    }
 		    for( i = 0; i < n-1; i++){
 		        rem = sum - a[i];
 		        for( j = i+1; j < n; j++){
 		            if( rem == a[j] )
-		            j = n;
+		            {
+		                j = n;
+		            }
 		        }
 		        if( j == n+1){
 		            System.out.println("Yes");
@@ -30,7 +34,9 @@ class GFG {
 		        }
 		    }
 		    if(i != n+1)
-		        System.out.println("No");
+		        {
+		            System.out.println("No");
+		        }
 		    
 		    t--;
 		}
